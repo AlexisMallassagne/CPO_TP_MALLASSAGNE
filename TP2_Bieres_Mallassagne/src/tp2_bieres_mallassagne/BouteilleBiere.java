@@ -32,5 +32,17 @@ public class BouteilleBiere {
                 System.out.println("erreur : bière déjà ouverte") ;
             }
     }
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = nom + " (" + degreAlcool + " degrés) Ouverte ? "; 
+        if (ouverte == true ) {
+            chaine_a_retourner += "oui" ;
+        }
+        else {
+            chaine_a_retourner += "non" ;
+        }
+        return chaine_a_retourner ;
+}
+
 
 }

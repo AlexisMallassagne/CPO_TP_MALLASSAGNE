@@ -31,6 +31,8 @@ public class TP2_Bieres_Mallassagne {
 
         BouteilleBiere quatreBiere = new BouteilleBiere("La Chouffe",8.0,"Nain sur un vélo") ;
         quatreBiere.lireEtiquette();
+        System.out.println(uneBiere) ;
+        uneBiere.Décapsuler();
 
 
     }
