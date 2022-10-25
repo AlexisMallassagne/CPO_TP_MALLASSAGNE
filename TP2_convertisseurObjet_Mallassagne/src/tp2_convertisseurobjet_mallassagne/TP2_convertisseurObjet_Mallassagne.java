@@ -14,7 +14,20 @@ public class TP2_convertisseurObjet_Mallassagne {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Convertisseur Temperat = new Convertisseur(); 
+        Convertisseur Temperat2 = new Convertisseur(); 
+        double temp=1.0;
+        Temperat.FarenheitVersKelvin(temp);
+        Temperat2.CelciusVersFarenheit(temp);
+        
+        System.out.println(Temperat);
+        System.out.println(Temperat2);
+        
+        
         // TODO code application logic here
     }
+    
+}
+
 
 }

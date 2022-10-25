@@ -9,15 +9,15 @@ package tp2_convertisseurobjet_mallassagne;
  * @author xelat
  */
 public class Convertisseur {
-
-    public Convertisseur(int nbconv) {
-        nbConversions = nbconv;
+    public Convertisseur() {
+        nbConversion=0;
     }
-    int nbConversions=0;
+        int nbConversion;
+
     public double CelciusVersKelvin(double celcius){
         
         double Kelvin = celcius + 273.15;
-        nbConversions +=1;
+        nbConversion +=1;
         
         return Kelvin;
         
@@ -27,7 +27,7 @@ public class Convertisseur {
     public double KelvinVersCelcius(double kelvin){
 
         double celcius = kelvin - 273.15;
-        nbConversions +=1;
+        nbConversion +=1;
 
         return celcius;
         
@@ -37,7 +37,7 @@ public class Convertisseur {
     public double FarenheitVersCelcius(double farenheit){
 
         double celcius = (farenheit - 32) / 1.8;
-        nbConversions +=1;
+        nbConversion +=1;
 
         return celcius;
 
@@ -47,7 +47,7 @@ public class Convertisseur {
     public double CelciusVersFarenheit(double celcius){
 
         double farenheit = (celcius * 1.8) + 32;
-        nbConversions +=1;
+        nbConversion +=1;
 
         return farenheit;
         
@@ -57,7 +57,7 @@ public class Convertisseur {
     public double KelvinVersFarenheit(double kelvin){
 
         double farenheit = CelciusVersFarenheit(KelvinVersCelcius(kelvin));
-        nbConversions +=1;
+        nbConversion +=1;
 
         return farenheit;
         
@@ -67,14 +67,13 @@ public class Convertisseur {
     public double FarenheitVersKelvin(double farenheit){
 
         double kelvin = CelciusVersKelvin(FarenheitVersCelcius(farenheit));
-        nbConversions +=1;
+        nbConversion +=1;
 
         return kelvin;
     }
     
     @Override
-public String toString () {
-return "nb de conversions"+ nbConversions;
-}
-
+    public String toString () {
+        return "nb de conversions"+ nbConversion;
+    }
 }
