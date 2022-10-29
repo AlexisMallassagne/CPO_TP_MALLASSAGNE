@@ -13,11 +13,15 @@ public class Personne {
     public Personne (String nom, String prenom){
         nomP=nom;
         prenomP=prenom;
+        liste_voitures=new Voiture [3];
+        nbVoitures=0;
     }
     String nomP;
     String prenomP;
+    int nbVoitures;
+    Voiture [] liste_voitures;
     @Override
     public String toString() {
-        return "La personne a le nom "+ nomP+ ", son prenom est "+prenomP;
+        return "La personne au nom de "+ nomP+ ", son prenom est "+prenomP+ " il a "+nbVoitures+" voitures. ";
     }
 }

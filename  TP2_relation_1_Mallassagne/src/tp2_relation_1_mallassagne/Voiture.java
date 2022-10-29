@@ -14,12 +14,15 @@ public class Voiture {
         Mode1=modele;
         Marq1=Marque;
         Puissance1=PuissanceCV;
+        proprietaire=null;
     }
     String Mode1;
     String Marq1;
     int Puissance1;
+    Personne proprietaire;
+    
     @Override
     public String toString() {
-        return "Le modele de la voiture est "+ Mode1 +" de la marque "+ Marq1 +" d'une puissance de "+Puissance1+" chevaux";
+        return "Le modele de la voiture est "+ Mode1 +" de la marque "+ Marq1 +" d'une puissance de "+Puissance1+" chevaux et son proprietaire est "+ proprietaire;
     }
 }
