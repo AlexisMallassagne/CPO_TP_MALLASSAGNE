@@ -8,25 +8,33 @@ package tp2_relation_1_mallassagne;
  *
  * @author xelat
  */
-public class Personne {
+public class Personne {//Création de la classe Personne
 
-    public Personne(String nom, String prenom) {
+    public Personne(String nom, String prenom) { //Remplissage de la classe Personne avec 4 attributs
         nomP = nom;
         prenomP = prenom;
         liste_voitures = new Voiture[3];
         nbVoitures = 0;
     }
-    String nomP;
+    String nomP; //initialisation des attributs 
     String prenomP;
     int nbVoitures;
     Voiture[] liste_voitures;
-
+/**
+     * La methode toString retourne la chaine de caracteres que l'on souhaite
+     * afficher quand l'objet est cité. C'est une methode qui s'appelle
+     * automatiquement quand est cité dans System.out.println()
+     */
     @Override
     public String toString() {
         return "La personne au nom de " + nomP + ", son prenom est " + prenomP + " il a " + nbVoitures + " voitures. ";
 
     }
-
+/**
+ * Cette Methode ajoute, si possible, une nouvelle voiture à un nouveau propriétaire
+ * @param voiture_a_ajouter
+ * @return true ou false en fonction de la disponibilité de la voiture ou de la "place dans le garage"
+ */
     public boolean ajouter_voiture(Voiture voiture_a_ajouter) {
         if (voiture_a_ajouter.proprietaire != null) {
             System.out.println("C'est une voiture volée");
