@@ -8,10 +8,10 @@ package tp2_manip_mallassagne;
  *
  * @author xelat
  */
-public class Tartiflette {
+public class Tartiflette { //Remplissage de la classe Tartiflette avec 1 attribut
     public Tartiflette(int cal){
         nbCalories=cal;
     }
-    int nbCalories;
+    int nbCalories; // Initialisation de l'attribut de Tartiflette
 }
     

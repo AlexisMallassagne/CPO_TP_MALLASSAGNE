@@ -8,9 +8,9 @@ package tp2_manip_mallassagne;
  *
  * @author xelat
  */
-public class Moussaka {
+public class Moussaka { //Remplissage de la classe Moussaka avec 1 attribut
     public Moussaka(int cal){
         nbCalories=cal;
     }
-    int nbCalories;
+    int nbCalories; //initialisation de l'attribut de Moussaka
 }
