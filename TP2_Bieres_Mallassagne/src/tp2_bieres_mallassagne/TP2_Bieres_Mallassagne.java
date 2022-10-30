@@ -6,7 +6,7 @@ package tp2_bieres_mallassagne;
 
 /**
  *
- * @author xelat
+ * @author AlexisMallassagne TDB
  */
 public class TP2_Bieres_Mallassagne {
 
@@ -14,8 +14,8 @@ public class TP2_Bieres_Mallassagne {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", 7.0 ,"Dubuisson") ; //Définir un constructeur écrase la visibilité du constructeur par défaut, et il faut donc soit redéfinir un autre constructeur sans paramètres, soit modifier la création des objets précédent
-        uneBiere.nom = "Cuvée des trolls";
+        BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", 7.0 ,"Dubuisson") ; //création de l'objet uneBiere
+        uneBiere.nom = "Cuvée des trolls"; //Initialiastion "lente" de l'objet uneBiere, de même pour autreBiere et deuxBiere
         uneBiere.degreAlcool = 7.0;
         uneBiere.lireEtiquette();
         BouteilleBiere autreBiere = new BouteilleBiere("Leffe", 6.6 ,"Abbaye de Leffe") ;
@@ -26,15 +26,16 @@ public class TP2_Bieres_Mallassagne {
         BouteilleBiere deuxBiere = new BouteilleBiere("Desperados",5.9,"Tequila flavour") ;
         deuxBiere.lireEtiquette();
 
-        BouteilleBiere troisBiere = new BouteilleBiere("Pelford",5.8,"Mon frigo") ;
+        BouteilleBiere troisBiere = new BouteilleBiere("Pelford",5.8,"Mon frigo") ; // création et initialisation de l'objet troisBiere
         troisBiere.lireEtiquette();
 
         BouteilleBiere quatreBiere = new BouteilleBiere("La Chouffe",8.0,"Nain sur un vélo") ;
-        quatreBiere.lireEtiquette();
+        quatreBiere.lireEtiquette();//appel de la methode lireEtiquette
         System.out.println(uneBiere) ;
-        uneBiere.Décapsuler();
+        uneBiere.Décapsuler();//appel de la methode Decapsuler
+        
 
-
+        
     }
     
 }
