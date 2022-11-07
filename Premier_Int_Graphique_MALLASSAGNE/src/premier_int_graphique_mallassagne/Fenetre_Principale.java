@@ -19,6 +19,7 @@ public class Fenetre_Principale extends javax.swing.JFrame {
         resultat.setVisible(false);
         Salaire_ajouté.setVisible(false);
         labelmdp.setVisible(false);
+        resultmdp.setVisible(false);
     }
 
     /**
@@ -41,8 +42,9 @@ public class Fenetre_Principale extends javax.swing.JFrame {
         Salaire_ajouté = new javax.swing.JLabel();
         Affi_mdp = new javax.swing.JToggleButton();
         labelmdp = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        Password = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        resultmdp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,13 +82,15 @@ public class Fenetre_Principale extends javax.swing.JFrame {
 
         labelmdp.setText("1234");
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                PasswordActionPerformed(evt);
             }
         });
 
         jLabel1.setText("Rentrez votre Mot de Passe");
+
+        resultmdp.setText("resultmdp");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,12 +102,14 @@ public class Fenetre_Principale extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(20, 20, 20)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addContainerGap()
-                                    .addComponent(Entrée_Prénom)))
+                                    .addComponent(Entrée_Prénom))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(20, 20, 20)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(resultmdp)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -112,7 +118,7 @@ public class Fenetre_Principale extends javax.swing.JFrame {
                                     .addComponent(BoutonValidé))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(43, 43, 43)
-                                    .addComponent(jPasswordField1)
+                                    .addComponent(Password)
                                     .addGap(53, 53, 53))))
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
@@ -154,10 +160,12 @@ public class Fenetre_Principale extends javax.swing.JFrame {
                     .addComponent(Salaire_ajouté))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(5, 5, 5)
-                .addComponent(Affi_mdp)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Affi_mdp)
+                    .addComponent(resultmdp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(msgAdieu)
@@ -195,9 +203,18 @@ public class Fenetre_Principale extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Affi_mdpActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
+        String mdp = new String (Password.getPassword());
+        String bonmdp ="1234";
+        if ("1234".equals(mdp)){
+            resultmdp.setText("Bon mot de passe ! ! !");
+            resultmdp.setVisible(true);
+        }
+        else {
+            resultmdp.setText("Mauvais mot de passe ! ! !");
+            resultmdp.setVisible(true);
+        }
+    }//GEN-LAST:event_PasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,13 +257,14 @@ public class Fenetre_Principale extends javax.swing.JFrame {
     private javax.swing.JButton BoutonValidé;
     private javax.swing.JLabel Entrée_Prénom;
     private javax.swing.JLabel LabelSalaire;
+    private javax.swing.JPasswordField Password;
     private javax.swing.JLabel Salaire_ajouté;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel labelmdp;
     private javax.swing.JLabel msgAdieu;
     private javax.swing.JTextField prenom;
     private javax.swing.JLabel resultat;
+    private javax.swing.JLabel resultmdp;
     private javax.swing.JTextField salaire;
     // End of variables declaration//GEN-END:variables
 }
