@@ -15,6 +15,10 @@ public class Fenetre_Principale extends javax.swing.JFrame {
      */
     public Fenetre_Principale() {
         initComponents();
+        System.out.println("Fenetre créée");
+        resultat.setVisible(false);
+        Salaire_ajouté.setVisible(false);
+        labelmdp.setVisible(false);
     }
 
     /**
@@ -26,31 +30,174 @@ public class Fenetre_Principale extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        msgBienvenue = new javax.swing.JLabel();
+        msgAdieu = new javax.swing.JLabel();
+        BoutonValidé = new javax.swing.JButton();
+        Entrée_Prénom = new javax.swing.JLabel();
+        prenom = new javax.swing.JTextField();
+        resultat = new javax.swing.JLabel();
+        LabelSalaire = new javax.swing.JLabel();
+        salaire = new javax.swing.JTextField();
+        Augmentez_salaire = new javax.swing.JButton();
+        Salaire_ajouté = new javax.swing.JLabel();
+        Affi_mdp = new javax.swing.JToggleButton();
+        labelmdp = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        msgBienvenue.setText("Hello World");
+        msgAdieu.setText("Goodbye");
+
+        BoutonValidé.setText("Cliquez ici !");
+        BoutonValidé.setOpaque(false);
+        BoutonValidé.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BoutonValidéActionPerformed(evt);
+            }
+        });
+
+        Entrée_Prénom.setText("Entrez votre prenom :");
+
+        resultat.setText("resultat");
+
+        LabelSalaire.setText("Entrez votre salaire :");
+
+        Augmentez_salaire.setText("Augmentez votre salaire");
+        Augmentez_salaire.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Augmentez_salaireActionPerformed(evt);
+            }
+        });
+
+        Salaire_ajouté.setText("ajoutSalaire");
+
+        Affi_mdp.setText("Affichage du mot de passe");
+        Affi_mdp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Affi_mdpActionPerformed(evt);
+            }
+        });
+
+        labelmdp.setText("1234");
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Rentrez votre Mot de Passe");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(msgBienvenue)
-                .addContainerGap(335, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Affi_mdp, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(20, 20, 20)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(Entrée_Prénom)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(BoutonValidé))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(43, 43, 43)
+                                    .addComponent(jPasswordField1)
+                                    .addGap(53, 53, 53))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(resultat)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(LabelSalaire)
+                                        .addComponent(Salaire_ajouté))
+                                    .addGap(53, 53, 53)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(Augmentez_salaire, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(salaire, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(13, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(msgAdieu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelmdp)
+                .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(msgBienvenue)
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Entrée_Prénom)
+                    .addComponent(prenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoutonValidé))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(resultat)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelSalaire)
+                    .addComponent(salaire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Augmentez_salaire)
+                    .addComponent(Salaire_ajouté))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(5, 5, 5)
+                .addComponent(Affi_mdp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(msgAdieu)
+                    .addComponent(labelmdp))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BoutonValidéActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonValidéActionPerformed
+        String a = prenom.getText();
+        resultat.setText("Bonjour "+a);
+        msgAdieu.setText("Salut, à bientôt.");
+        resultat.setVisible(true);
+    }//GEN-LAST:event_BoutonValidéActionPerformed
+        int ajout=0;
+    private void Augmentez_salaireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Augmentez_salaireActionPerformed
+        String b = salaire.getText();
+        int b_entier = Integer.parseInt(b);
+        b_entier+=100;
+        salaire.setText(b_entier+"");
+        ajout+=100;
+        Salaire_ajouté.setText("Votre salaire a augmenté de "+ajout+" euros");
+        Salaire_ajouté.setVisible(true);
+    }//GEN-LAST:event_Augmentez_salaireActionPerformed
+
+    private void Affi_mdpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Affi_mdpActionPerformed
+        if (Affi_mdp.isSelected()){
+                    labelmdp.setVisible(true);
+        }
+        else{
+            labelmdp.setVisible(false);
+        }
+
+    }//GEN-LAST:event_Affi_mdpActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +235,18 @@ public class Fenetre_Principale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel msgBienvenue;
+    private javax.swing.JToggleButton Affi_mdp;
+    private javax.swing.JButton Augmentez_salaire;
+    private javax.swing.JButton BoutonValidé;
+    private javax.swing.JLabel Entrée_Prénom;
+    private javax.swing.JLabel LabelSalaire;
+    private javax.swing.JLabel Salaire_ajouté;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel labelmdp;
+    private javax.swing.JLabel msgAdieu;
+    private javax.swing.JTextField prenom;
+    private javax.swing.JLabel resultat;
+    private javax.swing.JTextField salaire;
     // End of variables declaration//GEN-END:variables
 }
