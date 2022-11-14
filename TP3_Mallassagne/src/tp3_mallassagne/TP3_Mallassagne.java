@@ -4,6 +4,8 @@
  */
 package tp3_mallassagne;
 
+import java.util.Scanner;
+
 /**
  *
  * @author xelat
@@ -14,7 +16,11 @@ public class TP3_Mallassagne {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Arme arme1 = new Arme("arme standard",25);
+        arme1.setAttaque(25);
+        arme1.setAttaque(-20);
+        
+        
     }
     
 }
