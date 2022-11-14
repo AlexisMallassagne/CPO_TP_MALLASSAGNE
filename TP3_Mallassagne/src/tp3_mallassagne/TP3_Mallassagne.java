@@ -17,10 +17,14 @@ public class TP3_Mallassagne {
      */
     public static void main(String[] args) {
         Arme arme1 = new Arme("arme standard",25);
-        arme1.setAttaque(25);
+        arme1.setAttaque(20);
         arme1.setAttaque(-20);
+        System.out.println(arme1);
         
-        
+        Baton baton1 = new Baton("Charme", 5, 6);
+        Baton baton2 = new Baton("Chêne", 4, 5);
+        Epee epee1 = new Epee("Durandal",4,7);
+        Epee epee2 = new Epee("Excalibur",7,5);
     }
     
 }
