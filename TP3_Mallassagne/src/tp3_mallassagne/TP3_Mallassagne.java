@@ -5,6 +5,7 @@
 package tp3_mallassagne;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -25,6 +26,11 @@ public class TP3_Mallassagne {
         Baton baton2 = new Baton("Chêne", 4, 5);
         Epee epee1 = new Epee("Durandal",4,7);
         Epee epee2 = new Epee("Excalibur",7,5);
+        ArrayList<Arme> Tab1 = new ArrayList<>();
+        Tab1.add(baton1);
+        Tab1.add(baton2);
+        Tab1.add(epee1);
+        Tab1.add(epee2);
     }
     
 }
