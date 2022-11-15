@@ -18,7 +18,12 @@ public class Personnage {
     private int pv;
     String nom;
     ArrayList <Arme> Tab_Arme = new ArrayList<>();
-    Arme Arme_en_main;
+    private Arme Arme_en_main;
+
+    public Arme getArme_en_main() {
+        return Arme_en_main;
+    }
+    
 
     public int getPv() {
         return pv;
@@ -28,16 +33,22 @@ public class Personnage {
         this.pv = pv;
     }
     public void MethodeArme (Arme arme){
-       for (int i=0; i<5; i++){
+       int verif=0;
+       for (int i=0; i<Tab_Arme.size(); i++){
            if (Tab_Arme.get(i)==arme){
-               System.out.println("l'arme ");
+               System.out.println("l'arme est équipée");
                Arme_en_main = Tab_Arme.get(i);
+               verif=1;
                break;
            }
-           else{
-               System.out.println("l'arme n'a pas été trouvé et elle n'est donc pas équipée");
-           }
+           
+           
+           
        }
+       if (verif==0){
+           System.out.println("l'arme n'a pas été trouvé et elle n'est donc pas équipée");
+       }
+       
     }
     public void AjoutArme (Arme arme){
         if (Tab_Arme.size()<5){

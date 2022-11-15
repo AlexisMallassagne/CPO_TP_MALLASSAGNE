@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tp3_mallassagne;
+package Armes;
 
 /**
  *
@@ -36,7 +36,7 @@ public class Baton extends Arme{
 
     @Override
     public String toString() {
-        return "nom{" + nom+ "niveau d'attaque" + this.getAttaque() + "age"+ Indice +'}';
+        return "nom{" + nom+ " niveau d'attaque " + this.getAttaque() + " age "+ Indice +'}';
     }
     
     
